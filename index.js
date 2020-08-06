@@ -5,11 +5,10 @@ const {name, version } = PKG;
 
 console.log('${name} v${version}');
 const {genesis}=Block;
-console.log(genesis.toString());
 
-const block = new Block (Date.now(), genesis.hash, 'hash', 'data');
-console.log(block.toString()) 
+const block1 = Block.mine(genesis, 'data_1');
+console.log(block1.toString());
 
-const block_" = new Block(Date.now(),block.hash, 'hash_2', 'data_2');
-console.log(block:2.toString());
+const block2 =Block.mine(block1, 'data_2');
+console.log(block2.toString());
 

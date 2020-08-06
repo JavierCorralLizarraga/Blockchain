@@ -13,6 +13,13 @@ class Block {
     }
 
 
+    static mine(previousBlock, data){
+        const timestamp=Date.now();
+        const hash='@TODO-hash';
+        const { hash:previousHash} = previousBlock;
+
+        return new this(timestamp, previousHash, hash, data);
+    }
 
     to string(){
         const {timestamp, previousHash, hash, data,}=this;
